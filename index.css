@@ -4,15 +4,19 @@ body {
 }
 
 header {
-  float: right;
+  float: left;
   width:100%;
   height: 50px;
   text-decoration: none;
-  text-align: right;
+  text-align: left;
   background-color: #303030;
   position: fixed;
   z-index:9999;
   text-transform: uppercase;
+}
+
+.shadow{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #topic{
@@ -45,8 +49,8 @@ header {
   font-family: 'Tillana', cursive;
 }
 
-#container h1,h2,h4,h5,h6 {
-  font-family: 'Cherry Swash', cursive;
+#container h1,h2 {
+  font-family: 'Aclonica', sans-serif;
   color: #500b65;
   text-transform: uppercase;
 }
@@ -59,22 +63,29 @@ footer{
   background-color: #303030;
   text-align: center;
   position: absolute;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 #cm {
   height: auto;
-  padding-top: 70px;
   font-size: 20px;
   font-variant: small-caps;
   text-align: center;
   margin: auto;
   color: white;
   font-family: 'Alegreya', serif;
+  margin-bottom: 30px;
 }
 
 #cm>h3{
   font-size: 45px;
   line-height: 100px;
+}
+
+#cm>h4{
+  font-size: 25px;
+  margin-bottom: 40px;
 }
 
 #in {
@@ -125,13 +136,13 @@ footer{
     margin-right: 10px;
   }
   #icon{
-    margin-right: 67%;
+    margin-left: 10%;
   }
   footer{
     height:500px;
   }
   #cm {
-    width: 600px;
+    width: 100%;
   }
 }
 
