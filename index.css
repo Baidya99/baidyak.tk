@@ -1,24 +1,28 @@
 
 body {
-  background-color: #333333;
+  background-color: #ffffff;
 }
 
-#header {
+header {
   float: right;
   width:100%;
   height: 50px;
   text-decoration: none;
   text-align: right;
-  background-color: #ffffff;
+  background-color: #303030;
   position: fixed;
   z-index:9999;
-  background: #eeeeee;
-  background: -webkit-radial-gradient(#ffffff, #dddddd);
-  background: -o-radial-gradient(#ffffff, #dddddd);
-  background: -moz-radial-gradient(#ffffff, #dddddd);
-  background: radial-gradient(#ffffff, #dddddd);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   text-transform: uppercase;
+}
+
+#topic{
+  width: 100%;
+  font-family: 'Megrim', cursive;
+  padding-top: 130px;
+  background-color: #303030;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 #container{
@@ -29,8 +33,10 @@ body {
   border-color: #444444;
   background-color: #ffffff;
   padding-bottom: 200px;
-  padding-top: 100px;
+  padding-top: 70px;
+  margin-top: 100px;
   height: 1000px;
+  position: relative;
 }
 
 #container p{
@@ -39,13 +45,71 @@ body {
   font-family: 'Tillana', cursive;
 }
 
-#container h1,h2,h3,h4,h5,h6 {
-  font-family: 'Fruktur', cursive;
+#container h1,h2,h4,h5,h6 {
+  font-family: 'Cherry Swash', cursive;
   color: #500b65;
   text-transform: uppercase;
 }
+#icon{
+  width: 50px;
+  height: auto;
+}
+footer{
+  width:100%;
+  background-color: #303030;
+  text-align: center;
+  position: absolute;
+}
+
+#cm {
+  height: auto;
+  padding-top: 70px;
+  font-size: 20px;
+  font-variant: small-caps;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-family: 'Alegreya', serif;
+}
+
+#cm>h3{
+  font-size: 45px;
+  line-height: 100px;
+}
+
+#in {
+  color: white;
+}
+
+#out{
+  color: #8324e2;
+}
+
+.fa-lg:hover > #in{
+  color: gold;
+}
+
+#bug{
+  font-size: 15px;
+  width:100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  color: white;
+}
+
+
 
 @media only screen and (min-width:810px){
+  #heading{
+    width: 800px;
+    font-size: 100px;
+    margin:auto;
+  }
+  #topic{
+    height: 300px;
+  }
   #container{
     width:700px;
     padding-left: 50px;
@@ -56,17 +120,20 @@ body {
   #container p{
     font-size: 20px;
   }
-  #header span{
+  header>span{
     text-align: center;
     margin-right: 10px;
   }
-  #icon img{
-    width: 50px;
-    height: auto;
+  #icon{
     margin-right: 67%;
   }
+  footer{
+    height:500px;
+  }
+  #cm {
+    width: 600px;
+  }
 }
-
 
 * {
   margin: 0;
