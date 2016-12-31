@@ -54,6 +54,12 @@ header {
   color: #500b65;
   text-transform: uppercase;
 }
+
+#date{
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 20px;
+}
+
 #icon{
   width: 50px;
   height: auto;
@@ -120,15 +126,20 @@ footer{
   }
   #topic{
     height: 300px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
   #container{
     width:700px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 50px;
     margin:auto;
     font-size: 30px;
   }
   #container p{
+    font-size: 20px;
+  }
+  #date{
     font-size: 20px;
   }
   header>span{
@@ -140,6 +151,44 @@ footer{
   }
   footer{
     height:500px;
+  }
+  #cm {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:810px){
+  #topic{
+    height: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  #icon{
+    margin-left: 0;
+  }
+  #heading{
+    width: 100%;
+    font-size: 50px;
+    margin:auto;
+  }
+  #container{
+    width:100p%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    margin:auto;
+    font-size: 15px;
+  }
+  #container p{
+    font-size: 12px;
+  }
+  header>span{
+    text-align: center;
+    margin-right: 10px;
+  }
+  footer{
+    height:500px;
+  }
+  #date{
+    font-size: 12px;
   }
   #cm {
     width: 100%;
