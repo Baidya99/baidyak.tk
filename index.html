@@ -20,12 +20,21 @@
         <span><a href="">Interest</a></span>
       </div>
       <div class="bs">
-        <span><a href="">Creations</a></span>
-      </div>
-      <div class="bs">
         <span><a href="">Games</a></span>
       </div>
+      <div class="bs">
+        <span><a href="">Creations</a></span>
+      </div>
+      <span class="fa-lg" onclick="openNav()" id="menu"><i class="fa fa-navicon" style="color:white;font-size:30px;"></i></span>
     </header>
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <a href="#">Creations</a>
+        <a href="#">Games</a>
+        <a href="#">Interest</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
     <div id="topic">
       <span id="heading">Baidyanath's Blog</span>
     </div>
@@ -101,5 +110,26 @@
       </div>
       <span id="bug">Made by Baidyanath.<hr style="color:transparent;border-color:transparent;background-color:transparent;"> If you find a bug <i class="fa fa-bug fa-fw"></i> feel free to report it</span>
     </footer>
+    <script>
+      var s=0;
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("menu").onclick = closeNav;
+        if(!($('#H').hasClass('shadow')))
+        {
+          $('#H').addClass('shadow');
+          s=1;
+        }
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+        document.getElementById("menu").onclick = openNav;
+        if (s==1) {
+          $('#H').removeClass('shadow');
+          s=0;
+        }
+      }
+    </script>
   </body>
 </html>
