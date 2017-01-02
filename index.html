@@ -10,8 +10,8 @@
   <body>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
-    <header id="H" class="">
-      <a href="http://www.baidyak.tk"><img id="icon" src="http://www.baidyak.tk/images/icon.svg"></img></a>
+    <header id="H" class="wtext">
+      <a href="http://www.baidyak.tk"><img id="icon" class="big" src="http://www.baidyak.tk/images/icon.svg"></img></a>
       <div class="space"><span></span></div>
       <div class="bs">
         <span><a href="#cm">About</a></span>
@@ -25,7 +25,7 @@
       <div class="bs">
         <span><a href="">Creations</a></span>
       </div>
-      <span class="fa-lg" onclick="openNav()" id="menu"><i class="fa fa-navicon" style="color:white;font-size:30px;"></i></span>
+      <span class="fa-lg" onclick="openNav()" id="menu"><i class="fa fa-navicon" style="color:inherit;font-size:30px;"></i></span>
     </header>
     <div id="myNav" class="overlay">
       <div class="overlay-content">
@@ -111,24 +111,39 @@
       <span id="bug">Made by Baidyanath.<hr style="color:transparent;border-color:transparent;background-color:transparent;"> If you find a bug <i class="fa fa-bug fa-fw"></i> feel free to report it</span>
     </footer>
     <script>
-      var s=0;
       function openNav() {
         document.getElementById("myNav").style.width = "100%";
         document.getElementById("menu").onclick = closeNav;
-        if(!($('#H').hasClass('shadow')))
+        scrollTop = $(window).scrollTop();
+        $('#H').removeClass('whiteb');
+        $('#H').addClass('blackb');
+        if(scrollTop==0)
         {
           $('#H').addClass('shadow');
-          s=1;
+          $('#icon').removeClass('big');
+          $('#icon').addClass('small');
         }
+
+        $('body').addClass('stop-scrolling');
+        $('body').bind('touchmove', function(e){e.preventDefault()});
       }
 
       function closeNav() {
         document.getElementById("myNav").style.width = "0%";
         document.getElementById("menu").onclick = openNav;
-        if (s==1) {
+        scrollTop = $(window).scrollTop();
+        $('#H').removeClass('blackb');
+        if (scrollTop==0) {
           $('#H').removeClass('shadow');
-          s=0;
+          $('#H').addClass('wtext');
+          $('#icon').removeClass('small');
+          $('#icon').addClass('big');
+        }else {
+          $('#H').addClass('whiteb');
         }
+
+        $('body').removeClass('stop-scrolling');
+        $('body').unbind('touchmove');
       }
     </script>
   </body>

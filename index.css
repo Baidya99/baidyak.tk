@@ -3,16 +3,36 @@ body {
   background-color: #ffffff;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.small{
+  width: 50px;
+  height: auto;
+}
+
 header {
   float: left;
   width:100%;
   height: 50px;
   text-decoration: none;
   text-align: left;
-  background-color: #303030;
+  background-color: transparent;
   position: fixed;
-  z-index:9999;
+  z-index:9995;
   text-transform: uppercase;
+}
+
+.blackb{
+  background-color: #303030;
+  color: white;
+}
+
+.whiteb{
+  background-color: white;
+  color: #303030;
 }
 
 .shadow{
@@ -29,14 +49,24 @@ header {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  color: inherit;
 }
 .bs>span>a{
-  color: white;
   text-decoration: none;
   text-transform: lowercase;
   font-variant: small-caps;
   font-size: 20px;
+  color: inherit;
 }
+
+.wtext{
+  color: white;
+}
+
+.btext{
+  color: black;
+}
+
 
 .space{
   float: right;
@@ -51,7 +81,7 @@ header {
 }
 
 .bs:hover{
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(112,112,112,0.2);
 }
 
 .bs:hover>span>a{
@@ -110,7 +140,6 @@ header {
 #topic{
   width: 100%;
   font-family: 'Megrim', cursive;
-  padding-top: 130px;
   background-color: #303030;
   color: white;
   text-align: center;
@@ -150,8 +179,7 @@ header {
 }
 
 #icon{
-  width: 50px;
-  height: auto;
+  transition: ease 0.5s;
 }
 footer{
   width:100%;
@@ -208,15 +236,31 @@ footer{
   left: 0px;
   color: white;
 }
+@media only screen and (min-width:1020px) {
+  .big{
+    position: relative;
+    width: 26%;
+    height: auto;
+    margin-left: 37%;
+  }
+}
 
+@media only screen and (max-width:1020px) {
+  .big{
+    width: 150px;
+    margin-left: calc(50% - 75px);
+  }
+}
 
 
 @media only screen and (min-width:810px){
   #heading{
-    width: 800px;
+    width: 300px;
     font-size: 100px;
     margin:auto;
   }
+
+
   #menu{
     display: none;
   }
@@ -228,7 +272,8 @@ footer{
     display: none;
   }
   #topic{
-    height: 300px;
+    height: 250px;
+    padding-top: 25%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
   #container{
@@ -245,7 +290,7 @@ footer{
   #date{
     font-size: 20px;
   }
-  #icon{
+  .small{
     margin-left: 10%;
   }
   footer{
@@ -264,10 +309,11 @@ footer{
 }
 @media only screen and (max-width:810px){
   #topic{
-    height: 200px;
+    height: 150px;
+    padding-top: 150px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
-  #icon{
+  .small{
     margin-left: 0;
   }
   #heading{
