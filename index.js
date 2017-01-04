@@ -6,7 +6,7 @@ $(document).ready(function(){
       $('#H').addClass('whiteb');
       $('#H').removeClass('wtext');
       $('#icon').removeClass('big');
-      $('#icon').addClass('small');
+      $('#icon').addClass('small'); 
     }else{
       $('#H').removeClass('shadow');
       $('#H').removeClass('whiteb');
