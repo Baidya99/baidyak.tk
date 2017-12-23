@@ -1,3 +1,3 @@
 # baidyak.tk
-This repo contains the html files for my [Website](https://baidyak.tk).
+This repo contains the html files for my [Website](http://baidyak.tk).
 You could say it contains my diary.
